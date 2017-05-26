@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Collections;
 
-public class SpeedHackDetector1 : MonoBehaviour {
+public class SpeedHackDetector : MonoBehaviour {
 	
 	private const int THRESHOLD = 20000;//50ms---50毫秒
     private long ticksOnStart = 0;
@@ -72,7 +72,6 @@ public class SpeedHackDetector1 : MonoBehaviour {
     void OnGUI()
     {
         
-		Debug.Log ("sdfasdfasdf");
         GUI.TextField(new Rect(Screen.width / 2 , Screen.height / 2 - 50, 200, 30), ticksOnStart.ToString());
         GUI.TextField(new Rect(Screen.width / 2, Screen.height / 2, 200, 30), ticksOnStartVulnerable.ToString());
         GUI.TextField(new Rect(Screen.width / 2 , Screen.height / 2 + 50, 200, 30), Result.ToString());
